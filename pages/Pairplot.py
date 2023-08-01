@@ -27,5 +27,5 @@ data_1=data[v_list[0:5]]
 data_1['cluster']=data['cluster']
 fig1 = px.scatter_matrix(data_1,color='cluster')
 fig1.update_traces(marker={'size':3})
-fig.update_xaxes(tickfont_size=8)
+fig1.update_xaxes(tickfont_size=8)
 st.plotly_chart(fig1)
