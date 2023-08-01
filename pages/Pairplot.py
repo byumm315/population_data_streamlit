@@ -12,13 +12,16 @@ data=pd.read_csv('cluster_0801.csv')
 
 st.subheader('The Pairplot of Poulation data')
   
-v_list=data.columns
+v_list=list(data.columns)
 
 for i in range(len(v_list)):
     v_list[i]=v_list[i].replace('평균','')
     v_list[i]=v_list[i].strip()
 
-data.rename(columns={data.columns:v_list},inplace=True)
+col={}
+for i in list(data.columns):
+  col[i]=v_list[i]
+data.rename(columns=col,inplace=True)
 
 data['cluster']=list(map(str,data['cluster']))
 st.subheader('Part1')
