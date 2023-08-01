@@ -27,41 +27,41 @@ data['cluster']=list(map(str,data['cluster']))
 st.subheader('Part1')
 data_1=data[v_list[2:7]]
 data_1['cluster']=data['cluster']
-fig1 = px.scatter_matrix(data_1,color='cluster',height=1000, width=1000)
+fig1 = px.scatter_matrix(data_1,color='cluster',height=1500, width=1500)
 fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
 
 st.subheader('Part2')
 data_1=data[v_list[7:12]]
 data_1['cluster']=data['cluster']
-fig1 = px.scatter_matrix(data_1,color='cluster',height=1000, width=1000)
+fig1 = px.scatter_matrix(data_1,color='cluster',height=1500, width=1500)
 fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
 
 st.subheader('Part3')
 data_1=data[v_list[12:17]]
 data_1['cluster']=data['cluster']
-fig1 = px.scatter_matrix(data_1,color='cluster',height=1000, width=1000)
+fig1 = px.scatter_matrix(data_1,color='cluster',height=1500, width=1500)
 fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
 
 st.subheader('Part4')
 data_1=data[v_list[17:22]]
 data_1['cluster']=data['cluster']
-fig1 = px.scatter_matrix(data_1,color='cluster',height=1000, width=1000)
+fig1 = px.scatter_matrix(data_1,color='cluster',height=1500, width=1500)
 fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
 
 st.subheader('Part5')
 data_1=data[v_list[22:27]]
 data_1['cluster']=data['cluster']
-fig1 = px.scatter_matrix(data_1,color='cluster',height=1000, width=1000)
+fig1 = px.scatter_matrix(data_1,color='cluster',height=1500, width=1500)
 fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
 
 st.subheader('Part6')
 data_1=data[v_list[27:-2]]
 data_1['cluster']=data['cluster']
-fig1 = px.scatter_matrix(data_1,color='cluster',height=1000, width=1000)
+fig1 = px.scatter_matrix(data_1,color='cluster',height=1500, width=1500)
 fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
