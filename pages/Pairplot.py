@@ -6,6 +6,14 @@ import plotly.express as px
 import numpy as np
 import seaborn as sns
 
+path='NanumGothic.ttf'
+font_name=font_manager.FontProperties(fname=path).get_name()
+rc('font',family=font_name)
+print(font_name)
+
+rcParams['axes.unicode_minus'] = False
+fontprop=font_manager.FontProperties(fname=path,size=12)
+
 data=pd.read_csv('cluster_0801.csv')
 
 st.subheader('The Pairplot of Poulation data')
@@ -24,4 +32,4 @@ st.subheader('Part1')
 data_1=data[v_list[0:5]]
 data_1['cluster']=data['cluster']
 fig1 = sns.pairplot(data_1,hue='cluster')
-st.plotly_chart(fig1)
+st.pyplot(fig1)
