@@ -13,7 +13,6 @@ fpath = os.path.join(os.getcwd(), "NanumGothic.ttf")
 prop = font_manager.FontProperties(fname=fpath)
 
 rcParams['axes.unicode_minus'] = False
-fontprop=font_manager.FontProperties(fname=path,size=12)
 
 data=pd.read_csv('cluster_0801.csv')
 
