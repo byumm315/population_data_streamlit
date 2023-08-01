@@ -21,28 +21,29 @@ v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시�
 data['cluster']=list(map(str,data['cluster']))
 st.subheader('Part1')
 fig1 = px.scatter_matrix(data,
-    dimensions=v_list[0:8],
+    dimensions=v_list[0:5],
     color="cluster")
-fig1.update_traces(marker={'size':2})
+fig1.update_traces(marker={'size':3})
+fig1.update_xaxes(tickangle=45)
 st.plotly_chart(fig1)
 
 st.subheader('Part2')
 fig1 = px.scatter_matrix(data,
-    dimensions=v_list[8:16],
+    dimensions=v_list[5:10],
     color="cluster")
-fig1.update_traces(marker={'size':2})
+fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
 
 st.subheader('Part3')
 fig1 = px.scatter_matrix(data,
-    dimensions=v_list[16:24],
+    dimensions=v_list[10:15],
     color="cluster")
-fig1.update_traces(marker={'size':2})
+fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
 
 st.subheader('Part4')
 fig1 = px.scatter_matrix(data,
-    dimensions=v_list[24:],
+    dimensions=v_list[15:20],
     color="cluster")
-fig1.update_traces(marker={'size':2})
+fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
