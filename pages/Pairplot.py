@@ -10,7 +10,7 @@ from matplotlib import font_manager,rc,rcParams
 import os
 
 fpath = os.path.join(os.getcwd(), "NanumGothic.ttf")
-prop = fm.FontProperties(fname=fpath)
+prop = font_manager.FontProperties(fname=fpath)
 
 rcParams['axes.unicode_minus'] = False
 fontprop=font_manager.FontProperties(fname=path,size=12)
