@@ -19,8 +19,8 @@ v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시�
        '배달 서비스 사용일수', '배달_브랜드 서비스 사용일수']
 
 data['cluster']=list(map(str,data['cluster']))
-var1 = st.selectbox(label = "Choose a Variable1", options = v_list,key=0)
-title = f"The Histograms of {var1} with Cluster"
-fig1 = px.histogram(data, x=var1, color='cluster',title=title)
-fig1.update_traces(marker={'size':5})
+fig1 = px.scatter_matrix(data,
+    dimensions=v_list,
+    color="cluster")
+fig1.update_traces(marker={'size':2})
 st.plotly_chart(fig1)
