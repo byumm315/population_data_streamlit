@@ -24,7 +24,10 @@ fig1 = px.scatter_matrix(data,
     dimensions=v_list[0:5],
     color="cluster")
 fig1.update_traces(marker={'size':3})
-fig1.update_xaxes(tickangle=45)
+fig1.update_xaxes(tickangle=45,
+                 tickmode = 'array',
+                 tickvals = np.array(range(0,5)),
+                 ticktext=v_list[0:5])
 st.plotly_chart(fig1)
 
 st.subheader('Part2')
