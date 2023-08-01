@@ -20,6 +20,6 @@ v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시�
 
 var1 = st.selectbox(label = "Choose a Variable", options = v_list,key=0)
 title = f"The Boxplots of {var1} with Cluster"
-fig1 = px.box(data=data,x='cluster',y=var1)
+fig1 = px.box(data,x='cluster',y=var1)
 fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
