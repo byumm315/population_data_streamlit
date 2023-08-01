@@ -8,10 +8,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib import font_manager,rc,rcParams
 
-prop = font_manager.FontProperties(fname='C:\\Users\\tyumi\\NanumGothic.ttf')
-
-rcParams['axes.unicode_minus'] = False
-
 data=pd.read_csv('cluster_0801.csv')
 
 st.subheader('The Pairplot of Poulation data')
@@ -29,5 +25,5 @@ data['cluster']=list(map(str,data['cluster']))
 st.subheader('Part1')
 data_1=data[v_list[0:5]]
 data_1['cluster']=data['cluster']
-fig1 = sns.pairplot(data_1,hue='cluster')
-st.pyplot(fig1)
+fig1 = px.scatter_matrix(data_1,color='cluster')
+st.plotly_chart(fig1)
