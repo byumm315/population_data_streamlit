@@ -19,8 +19,8 @@ for i in range(len(v_list)):
     v_list[i]=v_list[i].strip()
 
 col={}
-for i in list(data.columns):
-  col[i]=v_list[i]
+for i in range(len(v_list)):
+  col[list(data.columns)[i]]=v_list[i]
 data.rename(columns=col,inplace=True)
 
 data['cluster']=list(map(str,data['cluster']))
