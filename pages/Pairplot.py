@@ -21,6 +21,9 @@ v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시�
        '쇼핑 서비스 사용일수', '동영상/방송 서비스 사용일수', '유튜브 사용일수', '넷플릭스 사용일수',
        '배달 서비스 사용일수', '배달_브랜드 서비스 사용일수']
 
+for i in range(len(v_list)):
+  v_list[i]=v_list[i].replace('평균','')
+
 data['cluster']=list(map(str,data['cluster']))
 st.subheader('Part1')
 data_1=data[v_list[0:5]]
@@ -58,14 +61,7 @@ fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
 
 st.subheader('Part6')
-data_1=data[v_list[25:30]]
-data_1['cluster']=data['cluster']
-fig1 = px.scatter_matrix(data_1,color='cluster',height=1000, width=1000)
-fig1.update_traces(marker={'size':3})
-st.plotly_chart(fig1)
-
-st.subheader('Part7')
-data_1=data[v_list[30:34]]
+data_1=data[v_list[25:]]
 data_1['cluster']=data['cluster']
 fig1 = px.scatter_matrix(data_1,color='cluster',height=1000, width=1000)
 fig1.update_traces(marker={'size':3})
