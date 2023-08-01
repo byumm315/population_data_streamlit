@@ -18,6 +18,7 @@ v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시�
        '쇼핑 서비스 사용일수', '동영상/방송 서비스 사용일수', '유튜브 사용일수', '넷플릭스 사용일수',
        '배달 서비스 사용일수', '배달_브랜드 서비스 사용일수']
 
+data['cluster']=list(map(str,data['cluster']))
 var1 = st.selectbox(label = "Choose a Variable1", options = v_list,key=0)
 var2 = st.selectbox(label = "Choose a Variable2", options = v_list,key=1)
 title = f"The ScatterPlots of {var1} and {var2} with Cluster"
