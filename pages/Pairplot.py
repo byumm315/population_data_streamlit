@@ -24,5 +24,4 @@ st.subheader('Part1')
 data_1=data[v_list[0:5]]
 data_1['cluster']=data['cluster']
 fig1 = sns.pairplot(data_1,hue='cluster')
-fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
