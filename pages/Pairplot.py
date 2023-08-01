@@ -11,7 +11,6 @@ from matplotlib import font_manager,rc,rcParams
 path='NanumGothic.ttf'
 font_name=font_manager.FontProperties(fname=path).get_name()
 rc('font',family=font_name)
-print(font_name)
 
 rcParams['axes.unicode_minus'] = False
 fontprop=font_manager.FontProperties(fname=path,size=12)
