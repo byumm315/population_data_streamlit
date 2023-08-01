@@ -5,6 +5,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 import numpy as np
 import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib import font_manager,rc,rcParams
 
 path='NanumGothic.ttf'
 font_name=font_manager.FontProperties(fname=path).get_name()
