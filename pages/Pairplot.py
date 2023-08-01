@@ -7,10 +7,8 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib import font_manager,rc,rcParams
-import os
 
-fpath = os.path.join(os.getcwd(), "NanumGothic.ttf")
-prop = font_manager.FontProperties(fname=fpath)
+prop = font_manager.FontProperties(fname='C:/Users/tyumi/NanumGothic.ttf')
 
 rcParams['axes.unicode_minus'] = False
 
