@@ -7,7 +7,7 @@ import numpy as np
 
 data=pd.read_csv('cluster_0801.csv')
 
-st.subheader('The Histograms of Poulation data')
+st.subheader('The Pairplot of Poulation data')
   
 v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시간 평균', '평균 근무시간 평균',
        '소액결재 비사용 인구수', '소액결재 사용횟수 평균', '소액결재 사용금액 평균', '최근 3개월 내 요금 연체 비율',
@@ -19,8 +19,30 @@ v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시�
        '배달 서비스 사용일수', '배달_브랜드 서비스 사용일수']
 
 data['cluster']=list(map(str,data['cluster']))
+st.subheader('Part1')
 fig1 = px.scatter_matrix(data,
-    dimensions=v_list,
+    dimensions=v_list[0:8],
+    color="cluster")
+fig1.update_traces(marker={'size':2})
+st.plotly_chart(fig1)
+
+st.subheader('Part2')
+fig1 = px.scatter_matrix(data,
+    dimensions=v_list[8:16],
+    color="cluster")
+fig1.update_traces(marker={'size':2})
+st.plotly_chart(fig1)
+
+st.subheader('Part3')
+fig1 = px.scatter_matrix(data,
+    dimensions=v_list[16:24],
+    color="cluster")
+fig1.update_traces(marker={'size':2})
+st.plotly_chart(fig1)
+
+st.subheader('Part4')
+fig1 = px.scatter_matrix(data,
+    dimensions=v_list[24:],
     color="cluster")
 fig1.update_traces(marker={'size':2})
 st.plotly_chart(fig1)
