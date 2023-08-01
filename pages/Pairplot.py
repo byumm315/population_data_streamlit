@@ -21,6 +21,6 @@ v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시�
 
 data['cluster']=list(map(str,data['cluster']))
 st.subheader('Part1')
-fig1 = sns.pairplot(data[v_list[0:5]],hue='cluster')
+fig1 = sns.pairplot(data[v_list[0:5].append('cluster')],hue='cluster')
 fig1.update_traces(marker={'size':3})
 st.plotly_chart(fig1)
