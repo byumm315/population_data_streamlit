@@ -7,8 +7,6 @@ import numpy as np
 
 data=pd.read_csv('cluster.0801.csv')
 
-@st.cache_data()
-
 st.subheader('The Boxplot of Poulation data')
   
 v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시간 평균', '평균 근무시간 평균',
