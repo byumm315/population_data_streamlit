@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import numpy as np
 
-data=pd.read_csv('cluster.0801.csv')
+data=pd.read_csv('cluster_0801.csv')
 
 st.subheader('The Boxplot of Poulation data')
   
