@@ -15,7 +15,7 @@ def unique(list):
 st.subheader(os.getcwd())
 @st.cache_data
 def fontRegistered():
-    font_dirs = [os.getcwd() + '/customfonts']
+    font_dirs = [os.getcwd() + '/Nanum_Gothic']
     font_files = fm.findSystemFonts(fontpaths=font_dirs)
 
     for font_file in font_files:
