@@ -21,8 +21,8 @@ v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시�
 data['cluster']=list(map(str,data['cluster']))
 var1 = st.selectbox(label = "Choose a Variable1", options = v_list[:-1],key=0)
 title = f"The ScatterPlots of {var1} with Cluster"
-from plotly.subplots import make_subplots
 for i in v_list[:-1]:
+  title = f"The ScatterPlots of {var1} and {i} with Cluster"
   fig1 = px.scatter(data, x=var1, y=i, color='cluster',title=title)
   fig1.update_traces(marker={'size':3})
   st.plotly_chart(fig1)
