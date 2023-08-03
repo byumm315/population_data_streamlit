@@ -18,10 +18,10 @@ v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시�
        '쇼핑 서비스 사용일수', '동영상/방송 서비스 사용일수', '유튜브 사용일수', '넷플릭스 사용일수',
        '배달 서비스 사용일수', '배달_브랜드 서비스 사용일수']
 
-data['cluster']=list(map(str,data['cluster']))
+var3 = st.selectbox(label = "Choose a Cluster", options = [0,1,2,3,4,5,6],key=2)
 var1 = st.selectbox(label = "Choose a Variable1", options = v_list,key=0)
 var2 = st.selectbox(label = "Choose a Variable2", options = v_list,key=1)
-title = f"The ScatterPlots of {var1} and {var2} with Cluster"
-fig1 = px.scatter(data, x=var1, y=var2, color='cluster',title=title)
+title = f"The ScatterPlots of {var1} and {var2} with Cluster {var3}"
+fig1 = px.scatter(data[data['Cluster']==var3], x=var1, y=var2,title=title)
 fig1.update_traces(marker={'size':5})
 st.plotly_chart(fig1)
