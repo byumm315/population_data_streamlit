@@ -16,7 +16,6 @@ font_file=fm.findSystemFonts(fontpaths=os.getcwd())
 fm.fontManager.addfont(font_file[0])
 fm._load_fontmanager(try_read_cache=False)
 fontNames = [f.name for f in fm.fontManager.ttflist]
-st.subheader(fontNames)
 
 plt.rc('font', family=fontNames)
 
