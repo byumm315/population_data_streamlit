@@ -5,6 +5,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 import numpy as np
 import seaborn as sns
+import matplotlib.pyplot as plt
+
 data=pd.read_csv('cluster_0801.csv')
 
 st.subheader('The ScatterPlots of Poulation data')
