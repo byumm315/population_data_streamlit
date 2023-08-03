@@ -15,7 +15,7 @@ def unique(list):
 
 @st.cache_data
 def fontRegistered():
-    font_dirs = [os.getcwd() + '/customfonts']
+    font_dirs = ['C:/Users/tyumi/population_data_streamlit/customfonts']
     font_files = fm.findSystemFonts(fontpaths=font_dirs)
 
     for font_file in font_files:
