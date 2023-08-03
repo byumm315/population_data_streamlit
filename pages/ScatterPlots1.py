@@ -22,7 +22,7 @@ def fontRegistered():
 
 fontRegistered()
 fontNames = [f.name for f in fm.fontManager.ttflist]
-plt.rc('font', family='NanumGothic')
+plt.rc('font', family='MalgunGothic')
 
 data=pd.read_csv('cluster_0801.csv')
 
