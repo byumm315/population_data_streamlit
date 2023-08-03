@@ -7,7 +7,7 @@ import numpy as np
 
 data=pd.read_csv('cluster_0801.csv')
 
-st.subheader('The ScatterPlots of Poulation data')
+st.subheader('The ScatterPlots of Population data')
   
 v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시간 평균', '평균 근무시간 평균',
        '소액결재 비사용 인구수', '소액결재 사용횟수 평균', '소액결재 사용금액 평균', '최근 3개월 내 요금 연체 비율',
