@@ -40,5 +40,5 @@ for i in v_list[:-1]:
   title_1 = f"The ScatterPlots of {var1} and {i} with Cluster"
   ax=sns.scatterplot(data, x=var1, y=i, hue='cluster',alpha=0.3, palette="muted")
   ax.set(title=title_1)
-  ax.collections[0].set_sizes([100])       
+  ax.collections[0].set_sizes([50])       
   st.pyplot(fig1)
