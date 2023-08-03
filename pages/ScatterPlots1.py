@@ -12,7 +12,7 @@ import matplotlib.font_manager as fm
 
 @st.cache_data
 def fontRegistered():
-    font_dirs = ["C:/Users/tyumi/Documents/NanumFontSetup_TTF_SQUARE_ROUND"]
+    font_dirs = ["C:/Users/tyumi/Documents/NanumFontSetup_TTF_SQUARE_ROUND/"]
     font_files = fm.findSystemFonts(fontpaths=font_dirs)
 
     for font_file in font_files:
