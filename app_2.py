@@ -9,4 +9,4 @@ import numpy as np
 import os
 import matplotlib.font_manager as fm  # 폰트 관련 용도 as fm
 
-st.subheader(os.getcwd())
+st.subheader(fm.findSystemFonts(fontpaths=os.getcwd()))
