@@ -13,3 +13,11 @@ fm.fontManager.addfont(font_file[0])
 fm._load_fontmanager(try_read_cache=False)
 fontNames = [f.name for f in fm.fontManager.ttflist]
 st.subheader(fontNames)
+
+plt.rc('font', family=fontNames)
+tips = sns.load_dataset("tips")
+fig, ax = plt.subplots()
+sns.scatterplot(data=tips, x = 'total_bill', y = 'tip', hue='day')
+ax.set_title("한글 테스트")
+st.pyplot(fig)
+st.dataframe(tips)
