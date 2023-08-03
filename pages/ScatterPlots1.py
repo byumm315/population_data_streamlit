@@ -9,6 +9,5 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager
 import os
 import matplotlib.font_manager as fm
-
-
-st.subheader(fm.findSystemFonts(fontpaths=None,fontext='ttf'))
+import matplotlib as mpl
+st.subheader(set(sorted([f.name for f in mpl.font_manager.fontManager.ttflist])))
