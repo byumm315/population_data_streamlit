@@ -38,7 +38,8 @@ title = f"The ScatterPlots of {var1} with Cluster"
 for i in v_list[:-1]:
   fig1 = plt.figure()  
   title_1 = f"The ScatterPlots of {var1} and {i} with Cluster"
-  ax=sns.scatterplot(data, x=var1, y=i, hue='cluster',alpha=0.2, palette="muted")
+  ax=sns.scatterplot(data, x=var1, y=i, hue='cluster',alpha=0.4, palette="muted")
   ax.set(title=title_1)
+  plt.legend(loc='upper right', title='Cluster')
   ax.collections[0].set_sizes([30])       
   st.pyplot(fig1)
