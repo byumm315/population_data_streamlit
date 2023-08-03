@@ -36,9 +36,8 @@ data['cluster']=list(map(str,data['cluster']))
 var1 = st.selectbox(label = "Choose a Variable1", options = v_list[:-1],key=0)
 title = f"The ScatterPlots of {var1} with Cluster"
 for i in v_list[:-1]:
-  fig1 = plt.figure() 
-  import matplotlib as mpl
-  mpl.rcParams['lines.markersize'] = 50   
+  fig1 = plt.figure()  
   title_1 = f"The ScatterPlots of {var1} and {i} with Cluster"
-  sns.scatterplot(data, x=var1, y=i, hue='cluster',alpha=0.3, palette="muted").set(title=title_1)
+  ax=sns.scatterplot(data, x=var1, y=i, hue='cluster',alpha=0.3, palette="muted").set(title=title_1)
+  ax.collections[0].set_sizes([100])       
   st.pyplot(fig1)
