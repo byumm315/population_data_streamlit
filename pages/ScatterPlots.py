@@ -22,6 +22,6 @@ var3 = st.selectbox(label = "Choose a Cluster", options = [0,1,2,3,4,5,6],key=2)
 var1 = st.selectbox(label = "Choose a Variable1", options = v_list,key=0)
 var2 = st.selectbox(label = "Choose a Variable2", options = v_list,key=1)
 title = f"The ScatterPlots of {var1} and {var2} with Cluster {var3}"
-fig1 = px.scatter(data[data['Cluster']==var3], x=var1, y=var2,title=title)
+fig1 = px.scatter(data[data['cluster']==var3], x=var1, y=var2,title=title)
 fig1.update_traces(marker={'size':5})
 st.plotly_chart(fig1)
