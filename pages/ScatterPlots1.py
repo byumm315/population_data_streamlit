@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 import numpy as np
-
+import seaborn as sns
 data=pd.read_csv('cluster_0801.csv')
 
 st.subheader('The ScatterPlots of Poulation data')
@@ -23,6 +23,5 @@ var1 = st.selectbox(label = "Choose a Variable1", options = v_list[:-1],key=0)
 title = f"The ScatterPlots of {var1} with Cluster"
 for i in v_list[:-1]:
   title = f"The ScatterPlots of {var1} and {i} with Cluster"
-  fig1 = px.scatter(data, x=var1, y=i, color='cluster',title=title)
-  fig1.update_traces(marker={'size':3})
-  st.plotly_chart(fig1)
+  fig1 = sns.scatterplot(data, x=var1, y=i, hue='cluster',s=10,title=title)
+  st.pyplot(fig1)
