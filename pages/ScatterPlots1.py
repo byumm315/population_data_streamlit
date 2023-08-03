@@ -10,16 +10,5 @@ from matplotlib import font_manager
 import os
 import matplotlib.font_manager as fm
 
-@st.cache_data
-def fontRegistered():
-    font_dirs = ["C:/Users/tyumi/Documents/NanumFontSetup_TTF_SQUARE_ROUND/"]
-    font_files = fm.findSystemFonts(fontpaths=font_dirs)
 
-    for font_file in font_files:
-        fm.fontManager.addfont(font_file)
-    fm._load_fontmanager(try_read_cache=False)
-    
-
-fontRegistered()
-fontNames = [f.name for f in fm.fontManager.ttflist]
-st.subheader(fontnames)
+sub.header(fm.findSystemFonts(fontpaths=None,fontext='ttf'))
