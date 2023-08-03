@@ -9,6 +9,5 @@ import numpy as np
 import os
 import matplotlib.font_manager as fm  # 폰트 관련 용도 as fm
 
-# 설치된 폰트 출력
-font_list = [font.name for font in fm.fontManager.ttflist]
-st.subheader(font_list)
+import matplotlib as mpl
+st.subheader( mpl.__file__)
