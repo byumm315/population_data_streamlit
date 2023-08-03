@@ -22,6 +22,6 @@ data['cluster']=list(map(str,data['cluster']))
 var1 = st.selectbox(label = "Choose a Variable1", options = v_list[:-1],key=0)
 title = f"The ScatterPlots of {var1} with Cluster"
 for i in v_list[:-1]:
-  title = f"The ScatterPlots of {var1} and {i} with Cluster"
-  fig1 = sns.scatterplot(data, x=var1, y=i, hue='cluster',s=10,title=title)
+  title_1 = f"The ScatterPlots of {var1} and {i} with Cluster"
+  fig1 = sns.scatterplot(data, x=var1, y=i, hue='cluster',s=10).set(title=title_1)
   st.pyplot(fig1)
