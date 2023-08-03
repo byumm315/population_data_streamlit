@@ -9,34 +9,7 @@ import numpy as np
 import os
 import matplotlib.font_manager as fm  # 폰트 관련 용도 as fm
 
-def unique(list):
-    x = np.array(list)
-    return np.unique(x)
-
-@st.cache_data
-def fontRegistered():
-    font_files = fm.findSystemFonts(fontpaths=['C:/Users/tyumi/population_data_streamlit/customfonts'])
-    st.subheader(font_files)
-    for font_file in font_files:
-        fm.fontManager.addfont(font_file)
-    fm._load_fontmanager(try_read_cache=False)
-    
-
-def main():
-    
-    fontRegistered()
-    fontNames = [f.name for f in fm.fontManager.ttflist]
-    fontname = st.selectbox("폰트 선택", unique(fontNames))
-
-    plt.rc('font', family=fontname)
-    tips = sns.load_dataset("tips")
-    fig, ax = plt.subplots()
-    sns.scatterplot(data=tips, x = 'total_bill', y = 'tip', hue='day')
-    ax.set_title("한글 테스트")
-    st.pyplot(fig)
-    
-    st.dataframe(tips)
-    
-
-if __name__ == "__main__":
-    main()
+path = '/usr/share/fonts/truetype/nanum/NanumGothic_Coding.ttf' # fontlist에 있던 경로입니다
+font_name = fm.FontProperties(fname=path).get_name()
+rc('font', family=font_name)
+st.subheader(font_name)
