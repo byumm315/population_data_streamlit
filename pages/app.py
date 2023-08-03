@@ -12,10 +12,10 @@ import matplotlib.font_manager as fm  # 폰트 관련 용도 as fm
 def unique(list):
     x = np.array(list)
     return np.unique(x)
-st.subheader(os.getcwd())
+
 @st.cache_data
 def fontRegistered():
-    font_dirs = [os.getcwd() + '/customfonts']
+    font_dirs = [os.getcwd() + '/customFonts']
     font_files = fm.findSystemFonts(fontpaths=font_dirs)
 
     for font_file in font_files:
