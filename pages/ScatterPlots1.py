@@ -6,6 +6,10 @@ import plotly.express as px
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
+
+plt.rcParams['font.family'] = 'NanumGothic'
+plt.rcParams['axes.unicode_minus'] = False
 
 data=pd.read_csv('cluster_0801.csv')
 
