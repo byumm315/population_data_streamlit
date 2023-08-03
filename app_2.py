@@ -8,6 +8,6 @@ import numpy as np
 # 폰트 적용
 import os
 import matplotlib.font_manager as fm  # 폰트 관련 용도 as fm
+f = [f.name for f in fm.fontManager.ttflist]
 
-import matplotlib as mpl
-st.subheader( mpl.__file__)
+st.subheader(f)
