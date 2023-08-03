@@ -20,6 +20,7 @@ v_list=['연령대', '총인구수', '1인가구수', '평균 출근 소요시�
 
 var3 = st.selectbox(label = "Choose a Cluster", options = [0,1,2,3,4,5,6],key=2)
 var1 = st.selectbox(label = "Choose a Variable1", options = v_list,key=0)
+var2 = st.selectbox(label = "Choose a Variable1", options = v_list,key=1)
 for i in v_list[:-1]:
   title = f"The ScatterPlots of {var1} with Cluster {var3}"
   fig1 = px.scatter(data[data['cluster']==var3], x=var1, y=var2,title=title,opacity=0.3)
